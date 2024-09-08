@@ -1,0 +1,130 @@
+/* !Import */
+@font-face {
+    font-family:'lexendR' ;
+    src: url(./Fonts/LexendDeca-Regular.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family:'bigshB' ;
+    src: url(./Fonts/BigShouldersDisplay-Bold.ttf);
+    font-weight: 700;
+}
+/* !Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* !Global Content */
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+body{
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    font-size: 15px;
+    font-family: sans-serif;
+    line-height: 1.4;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    margin-left:auto ;
+    margin-right: auto;
+
+}
+/* !Body Content */
+/* ?==========Start-Main========== */
+main .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(300px , 1fr));
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.card {
+    padding: 3em;
+}
+
+.vehicles1 {
+    background-color: var(--Bright-orange);
+}
+
+.vehicles2 {
+    background-color: var(--Dark-cyan);
+}
+
+.vehicles3 {
+    background-color: var(--Very-dark-cyan);
+}
+
+.card h1 {
+    color: var(--Very-light-gray-background-headings-buttons);
+    font-family: 'bigshB';
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-block: 0.5em;
+}
+
+.card p {
+    color: var(--Transparent-white-paragraphs);
+    margin-block: 0.5em;
+    font-family:'lexendR' ;
+
+}
+
+.card button {
+    all: unset;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    border-radius: 2em;
+    border: 1px solid var(--Very-light-gray-background-headings-buttons);
+    padding: 0.5em 2em;
+    margin-top: 5em;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: transparent;
+}
+
+/* !Media Query */
+/* Mobile: 320px - 480px */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .container {
+        width: 355px;     
+}
+    main{
+        padding-block: 3em;
+    }
+}
+
+/* Tablet: 768px - 1024px */
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 750px; 
+    }
+}
+
+/* Desktop: 1200px - 1440px */
+@media only screen and (min-width:992px ) {
+    .container {
+        width: 970px; 
+    }
+}
+
+/* Large Desktop: 1600px and above */
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 900px;
+    } 
+}
+
